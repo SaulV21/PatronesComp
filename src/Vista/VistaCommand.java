@@ -70,7 +70,7 @@ public class VistaCommand extends javax.swing.JFrame {
         txtSaldo.setWrapStyleWord(true);
         jScrollPane1.setViewportView(txtSaldo);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, -1, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

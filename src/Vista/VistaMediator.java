@@ -54,11 +54,11 @@ public class VistaMediator extends javax.swing.JFrame {
     }
 
     public JTextArea getTxtMensaje2() {
-        return txtMensaje2;
+        return txtMensaje1;
     }
 
     public void setTxtMensaje2(JTextArea txtMensaje2) {
-        this.txtMensaje2 = txtMensaje2;
+        this.txtMensaje1 = txtMensaje2;
     }
 
     public JTextField getTxtuser1() {
@@ -91,19 +91,21 @@ public class VistaMediator extends javax.swing.JFrame {
         txtuser1 = new javax.swing.JTextField();
         txtuser2 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtMensaje2 = new javax.swing.JTextArea();
+        txtMensaje1 = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         btnenviar2 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtMensaje1 = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txtMensaje2 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(102, 255, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("MEDIATOR");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, -1, -1));
 
         jLabel2.setText("Usuario 1:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
@@ -114,18 +116,21 @@ public class VistaMediator extends javax.swing.JFrame {
         btnEnviar1.setText("Enviar");
         jPanel1.add(btnEnviar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
+        btnVolver.setBackground(new java.awt.Color(0, 51, 255));
+        btnVolver.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnVolver.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver.setText("Volver");
         jPanel1.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 0, -1, -1));
         jPanel1.add(txtuser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 230, -1));
         jPanel1.add(txtuser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, 230, -1));
 
-        txtMensaje2.setColumns(20);
-        txtMensaje2.setLineWrap(true);
-        txtMensaje2.setRows(5);
-        txtMensaje2.setWrapStyleWord(true);
-        jScrollPane1.setViewportView(txtMensaje2);
+        txtMensaje1.setColumns(20);
+        txtMensaje1.setLineWrap(true);
+        txtMensaje1.setRows(5);
+        txtMensaje1.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txtMensaje1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 230, 150));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 230, 150));
 
         jLabel4.setText("Mensaje:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
@@ -133,17 +138,16 @@ public class VistaMediator extends javax.swing.JFrame {
         btnenviar2.setText("Enviar");
         jPanel1.add(btnenviar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
 
-        txtMensaje1.setColumns(20);
-        txtMensaje1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        txtMensaje1.setLineWrap(true);
-        txtMensaje1.setRows(5);
-        txtMensaje1.setWrapStyleWord(true);
-        jScrollPane2.setViewportView(txtMensaje1);
-
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 240, 150));
-
         jLabel5.setText("Mensaje:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
+
+        txtMensaje2.setColumns(20);
+        txtMensaje2.setLineWrap(true);
+        txtMensaje2.setRows(5);
+        txtMensaje2.setWrapStyleWord(true);
+        jScrollPane3.setViewportView(txtMensaje2);
+
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 230, 150));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -171,7 +175,7 @@ public class VistaMediator extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea txtMensaje1;
     private javax.swing.JTextArea txtMensaje2;
     private javax.swing.JTextField txtuser1;
