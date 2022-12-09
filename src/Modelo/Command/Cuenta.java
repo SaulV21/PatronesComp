@@ -37,7 +37,7 @@ public class Cuenta  implements IObservador{
     @Override
     public void update() {
         //Accion a realizar depues que se realizo la transaccion
-        JOptionPane.showMessageDialog(null, " La Cuenta: " + id + "Realizo una Transacion por favor revise su coreo electronico para as detalles" );
+        JOptionPane.showMessageDialog(null, " La Cuenta Nº: " + id + " Realizo una Transacion por favor revise su correo electronico para mas detalles" );
         
     }
 }

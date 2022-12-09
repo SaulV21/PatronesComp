@@ -5,30 +5,23 @@
  */
 
 package Controlador;
-import Vista.JFProductos;
-import Modelo.Command.Cuenta;
-import Modelo.Command.DepositarImpl;
-import Modelo.Command.Invoker;
-import Modelo.Command.RetirarImpl;
+import Modelo.Strategy.Multiplicar;
+import Modelo.Strategy.OperacionAritmetica;
 import Modelo.Strategy.Orden;
 import Modelo.Strategy.PayPal;
 import Modelo.Strategy.PayStrategy;
+import Modelo.Strategy.Restar;
+import Modelo.Strategy.Sumar;
 import Modelo.Strategy.TarjetaCredito;
 import Vista.JFProductos;
-import Vista.VistaCommand;
 import Vista.VistaMenu;
-import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
-import javax.swing.JTextField;
 
 /**
  *
@@ -61,14 +54,29 @@ ButtonGroup g1;
     }
     
     public void iniciarCommand(){
-    vista.getBtnContinuar().addActionListener(l->Inicio());
+    vista.getBtnContinuar().addActionListener(l->verificar());
     vista.getBtntVolver().addActionListener(l->cerrar());
     
     }
  
-
+private void verificar(){
+ OperacionAritmetica context;
+ int val1, val2;
+ val1=Integer.parseInt(vista.getTxtNumero().getText());
+ val2=Integer.parseInt(vista.getTxtcantidad().getText());
+         context = new OperacionAritmetica( new Sumar() );
+         int suma = context.procesar(val1, val2);
+        context = new OperacionAritmetica( new Restar() );
+        int resta = context.procesar(val1, val2);
+        context = new OperacionAritmetica( new Multiplicar() );
+        int multip = context.procesar(val1, val2);
+        vista.getjTextArea1().setText("SUMA: "+suma+"\nRESTA: "+resta+"\nMULTIPLICACION: "+multip);
+         System.out.println("Suma: " + suma );
+        System.out.println("Resta: " + resta );
+        System.out.println("Multiplicacion: " + multip );
+}
       String [] botones={"SI","NO"};
-           String [] pago={"Paypal","TrjetaCredito"};
+           String [] pago={"Paypal","TarjetaCredito"};
             String [] op={"Pagar","Continuar"};
           int x=0;
           int count;
@@ -86,7 +94,7 @@ ButtonGroup g1;
                                "2 - CPU" + "\n" +
                                "3 - HDD" + "\n" +
                                "4 - Memory" + "\n");
-                       System.out.println("    Seleecione una opcion");
+                       System.out.println("    Seleccione una opcion");
                        //choice = Integer.parseInt(reader.readLine());
                        
                        int  numdigitar=Integer.parseInt(vista.getTxtNumero().getText());
@@ -105,7 +113,7 @@ ButtonGroup g1;
                    
                    if (strategy == null) {
                        
-                       x=JOptionPane.showOptionDialog(null, "¿Seleccione metodo de pgo?","Opcion",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null,pago,pago[0]);
+                       x=JOptionPane.showOptionDialog(null, "¿Seleccione metodo de pago?","Opcion",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null,pago,pago[0]);
                       
                               
                        
@@ -121,7 +129,7 @@ ButtonGroup g1;
                            JOptionPane.showMessageDialog(null, " Realizo su transaccion con exito" );
                        } else {
                            
-                           String numt =JOptionPane.showInputDialog(null,"Numero de Trajeta","Dialogo",JOptionPane.QUESTION_MESSAGE);
+                           String numt =JOptionPane.showInputDialog(null,"Numero de Tarjeta","Dialogo",JOptionPane.QUESTION_MESSAGE);
                            String expedicion =JOptionPane.showInputDialog(null,"Fecha de Expiracion de Tarjeta","Dialogo",JOptionPane.QUESTION_MESSAGE);
                            String cvv =JOptionPane.showInputDialog(null,"Escriba CVV","Dialogo",JOptionPane.QUESTION_MESSAGE);
                            strategy = new TarjetaCredito();
