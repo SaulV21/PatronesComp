@@ -33,7 +33,6 @@ public class VistaMenu extends javax.swing.JFrame {
         btnVisitor = new javax.swing.JButton();
         btnCommand = new javax.swing.JButton();
         btnMediator = new javax.swing.JButton();
-        btnObserver = new javax.swing.JButton();
         btnStrategy = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
@@ -54,19 +53,19 @@ public class VistaMenu extends javax.swing.JFrame {
         btnCommand.setBackground(new java.awt.Color(204, 0, 255));
         btnCommand.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCommand.setForeground(new java.awt.Color(255, 255, 255));
-        btnCommand.setText("Command");
-        jPanel1.add(btnCommand, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 108, 95));
+        btnCommand.setText("Command y Observer");
+        btnCommand.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCommandActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnCommand, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 180, 95));
 
         btnMediator.setBackground(new java.awt.Color(0, 51, 204));
         btnMediator.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnMediator.setForeground(new java.awt.Color(255, 255, 255));
         btnMediator.setText("Mediator");
-        jPanel1.add(btnMediator, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 108, 95));
-
-        btnObserver.setBackground(new java.awt.Color(102, 0, 255));
-        btnObserver.setForeground(new java.awt.Color(255, 255, 255));
-        btnObserver.setText("Observer");
-        jPanel1.add(btnObserver, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 108, 95));
+        jPanel1.add(btnMediator, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 108, 95));
 
         btnStrategy.setBackground(new java.awt.Color(255, 51, 204));
         btnStrategy.setText("Strategy");
@@ -98,6 +97,10 @@ public class VistaMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnCommandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCommandActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCommandActionPerformed
+
     public JButton getBtnCommand() {
         return btnCommand;
     }
@@ -114,13 +117,7 @@ public class VistaMenu extends javax.swing.JFrame {
         this.btnMediator = btnMediator;
     }
 
-    public JButton getBtnObserver() {
-        return btnObserver;
-    }
-
-    public void setBtnObserver(JButton btnObserver) {
-        this.btnObserver = btnObserver;
-    }
+  
 
     public JButton getBtnSalir() {
         return btnSalir;
@@ -150,7 +147,6 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JLabel Fondo;
     private javax.swing.JButton btnCommand;
     private javax.swing.JButton btnMediator;
-    private javax.swing.JButton btnObserver;
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnStrategy;
     private javax.swing.JButton btnVisitor;

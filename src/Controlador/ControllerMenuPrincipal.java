@@ -4,6 +4,7 @@
  */
 package Controlador;
 
+import Vista.JFProductos;
 import Vista.VistaCommand;
 import Vista.VistaMediator;
 import Vista.VistaMenu;
@@ -18,6 +19,8 @@ public class ControllerMenuPrincipal {
     VistaCommand vistac;
     VistaMediator vistamed;
     VistaVisitor vistav;
+    JFProductos jfproducto;
+    
     public ControllerMenuPrincipal(VistaMenu vista) {
         this.vistamenu = vista;
         vista.setVisible(true);
@@ -28,6 +31,8 @@ public class ControllerMenuPrincipal {
         vistamenu.getBtnMediator().addActionListener(l->Mediator());
         vistamenu.getBtnSalir().addActionListener(l->salir());
         vistamenu.getBtnVisitor().addActionListener(l->Visitor());
+         vistamenu.getBtnStrategy().addActionListener(l->StrateGy());
+        
     }
 
     private void salir() {
@@ -54,4 +59,12 @@ public class ControllerMenuPrincipal {
       control.iniciarVisitor();
       this.vistamenu.setVisible(false);
     }
+      private void StrateGy(){
+      jfproducto = new JFProductos();
+     
+      ControllerStrategy control = new ControllerStrategy(jfproducto,vistamenu);
+      control.iniciarCommand();
+      this.vistamenu.setVisible(false);
+    }
+    
 }

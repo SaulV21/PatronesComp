@@ -75,14 +75,19 @@ public class Controller_Command {
         Cuenta cuenta = new Cuenta(numc, monto);
         Invoker ivk = new Invoker();
         vista.getTxtSaldo().setText("Cuenta Nº: "+numc+" creada con un saldo de $"+monto);
+        
          double dep = Double.parseDouble(JOptionPane.showInputDialog("Introduzca el saldo a depositar:"));
         DepositarImpl opDepositar = new DepositarImpl(cuenta, dep);
         ivk.recibirOperacion(opDepositar);
         ivk.realizarOperaciones();
+        ivk.enlazarObservador(cuenta);
+        ivk.depositarTransaccion();
         double ret = Double.parseDouble(JOptionPane.showInputDialog("Introduzca el saldo a retirar:"));
         RetirarImpl opRetirar = new RetirarImpl(cuenta, ret);
         ivk.recibirOperacion(opRetirar);
         ivk.realizarOperaciones();
+        ivk.enlazarObservador(cuenta);
+        ivk.depositarTransaccion();
         esperar(3);
         vista.getTxtmonto().setText("");
         vista.getTxtnumcuenta().setText("");

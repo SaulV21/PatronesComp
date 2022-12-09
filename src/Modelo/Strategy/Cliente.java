@@ -26,7 +26,7 @@ public class Cliente {
     public static void main(String[] args) throws IOException {
         while (!order.isClosed()) {
             int cost;
-
+            String [] botones={"SI","NO"};
             String continueChoice;
             do {
                 System.out.print("Please, select a product:" + "\n" +
@@ -34,10 +34,12 @@ public class Cliente {
                         "2 - CPU" + "\n" +
                         "3 - HDD" + "\n" +
                         "4 - Memory" + "\n");
+                System.out.println("Eliga");
                 int choice = Integer.parseInt(reader.readLine());
                 cost = priceOnProducts.get(choice);
                 System.out.print("Count: ");
                 int count = Integer.parseInt(reader.readLine());
+                
                 order.setTotalCost(cost * count);
                 System.out.print("Do you wish to continue selecting products? Y/N: ");
                 continueChoice = reader.readLine();
