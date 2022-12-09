@@ -2,17 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Saul/Documents/NetBeansProjects/PatronesComp/src/Modelo/Visitor/ProductoDescuento.java</file>
-            <file>file:/C:/Users/Saul/Documents/NetBeansProjects/PatronesComp/src/Controlador/ControllerVisitor.java</file>
-            <file>file:/C:/Users/Saul/Documents/NetBeansProjects/PatronesComp/src/Modelo/Visitor/Visitor.java</file>
-            <file>file:/C:/Users/Saul/Documents/NetBeansProjects/PatronesComp/src/Controlador/ControllerMediator.java</file>
-            <file>file:/C:/Users/Saul/Documents/NetBeansProjects/PatronesComp/src/Vista/VistaVisitor.java</file>
-            <file>file:/C:/Users/Saul/Documents/NetBeansProjects/PatronesComp/src/Modelo/Visitor/IVA.java</file>
-            <file>file:/C:/Users/Saul/Documents/NetBeansProjects/PatronesComp/src/Modelo/Visitor/ProductoNormal.java</file>
-            <file>file:/C:/Users/Saul/Documents/NetBeansProjects/PatronesComp/src/Modelo/Command/IOperacion.java</file>
-            <file>file:/C:/Users/Saul/Documents/NetBeansProjects/PatronesComp/src/Vista/VistaMediator.java</file>
-            <file>file:/C:/Users/Saul/Documents/NetBeansProjects/PatronesComp/src/Modelo/Visitor/Visitable.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

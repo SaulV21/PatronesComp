@@ -54,11 +54,11 @@ public class VistaMediator extends javax.swing.JFrame {
     }
 
     public JTextArea getTxtMensaje2() {
-        return txtMensaje1;
+        return txtMensaje2;
     }
 
     public void setTxtMensaje2(JTextArea txtMensaje2) {
-        this.txtMensaje1 = txtMensaje2;
+        this.txtMensaje2 = txtMensaje2;
     }
 
     public JTextField getTxtuser1() {

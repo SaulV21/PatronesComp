@@ -11,7 +11,7 @@ import java.util.HashMap;
  * @author Saul
  */
 public class SalondeChat implements ISalondeChat{
-
+/*Aqui se alamcenaran de manera temporal los usuarios que participaran en el chat*/
     private HashMap<String, Usuario> participantes=new HashMap<String, Usuario>();
     @Override
     public void registra(Usuario user) {
