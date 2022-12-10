@@ -3,19 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Modelo/Strategy/PayPal.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Controlador/ControllerStrategy.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Modelo/Command/Cuenta.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Modelo/Command/DepositarImpl.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Vista/JFProductos.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Modelo/Command/IOperacion.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Modelo/Strategy/TarjetaCredito.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Modelo/Strategy/TarjetaC.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Modelo/Command/IObservador.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Controlador/Controller_Command.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Controlador/ControllerMenuPrincipal.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Modelo/Strategy/Cliente.java</file>
-            <file>file:/C:/Users/daysi/Documents/GitHub/PatronesComp/src/Modelo/Command/Invoker.java</file>
+            <file>file:/C:/Users/Saul/Documents/GitHub/PatronesComp/src/Controlador/Controller_Command.java</file>
         </group>
     </open-files>
 </project-private>
