@@ -6,6 +6,7 @@ package Controlador;
 
 import Vista.JFProductos;
 import Vista.VistaCommand;
+import Vista.VistaCommand2;
 import Vista.VistaMediator;
 import Vista.VistaMenu;
 import Vista.VistaVisitor;
@@ -17,6 +18,7 @@ import Vista.VistaVisitor;
 public class ControllerMenuPrincipal {
     VistaMenu vistamenu;
     VistaCommand vistac;
+    VistaCommand2 vistac2;
     VistaMediator vistamed;
     VistaVisitor vistav;
     JFProductos jfproducto;
@@ -28,10 +30,11 @@ public class ControllerMenuPrincipal {
     }
     public void iniciar(){
         vistamenu.getBtnCommand().addActionListener(l->Command());
+        vistamenu.getBtnComand2().addActionListener(l->Command2());
         vistamenu.getBtnMediator().addActionListener(l->Mediator());
         vistamenu.getBtnSalir().addActionListener(l->salir());
         vistamenu.getBtnVisitor().addActionListener(l->Visitor());
-         vistamenu.getBtnStrategy().addActionListener(l->StrateGy());
+        vistamenu.getBtnStrategy().addActionListener(l->StrateGy());
         
     }
 
@@ -42,6 +45,13 @@ public class ControllerMenuPrincipal {
     private void Command(){
       vistac = new VistaCommand();
       Controller_Command control= new Controller_Command(vistac, vistamenu);
+      control.iniciarCommand();
+      this.vistamenu.setVisible(false);
+    }
+    
+    private void Command2(){
+      vistac2 = new VistaCommand2();
+      ControllerCommand2 control= new ControllerCommand2(vistac2, vistamenu);
       control.iniciarCommand();
       this.vistamenu.setVisible(false);
     }

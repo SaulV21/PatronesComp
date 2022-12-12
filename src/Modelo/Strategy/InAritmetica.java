@@ -8,6 +8,6 @@ package Modelo.Strategy;
  *
  * @author Saul
  */
-public interface IAritmetica {
-   public int realizarOperacion(int a, int b); 
+public interface InAritmetica {
+    public int realizarOperacion(int a, int b);
 }

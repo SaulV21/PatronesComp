@@ -8,12 +8,11 @@ package Modelo.Strategy;
  *
  * @author Saul
  */
-public class Sumar implements IAritmetica{
+public class Sumar implements InAritmetica{
     public Sumar() {
     }
     @Override
     public int realizarOperacion(int a, int b) {
     return a+b;    
     }
-    
 }

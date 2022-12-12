@@ -8,14 +8,12 @@ package Modelo.Strategy;
  *
  * @author Saul
  */
-public class Multiplicar implements IAritmetica{
-
-    public Multiplicar() {
+public class Multiplicar implements InAritmetica{
+     public Multiplicar() {
     }
 
     @Override
     public int realizarOperacion(int a, int b) {
         return a*b;
     }
-    
 }

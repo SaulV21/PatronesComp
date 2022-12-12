@@ -8,8 +8,7 @@ package Modelo.Strategy;
  *
  * @author Saul
  */
-public class Restar implements IAritmetica{
-
+public class Restar implements InAritmetica{
     public Restar() {
     }
 
@@ -17,5 +16,4 @@ public class Restar implements IAritmetica{
     public int realizarOperacion(int a, int b) {
         return a-b;
     }
-    
 }

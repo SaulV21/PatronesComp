@@ -35,9 +35,11 @@ public class VistaMenu extends javax.swing.JFrame {
         btnMediator = new javax.swing.JButton();
         btnStrategy = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
+        btnComand2 = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -54,11 +56,6 @@ public class VistaMenu extends javax.swing.JFrame {
         btnCommand.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCommand.setForeground(new java.awt.Color(255, 255, 255));
         btnCommand.setText("Command y Observer");
-        btnCommand.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCommandActionPerformed(evt);
-            }
-        });
         jPanel1.add(btnCommand, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 180, 95));
 
         btnMediator.setBackground(new java.awt.Color(0, 51, 204));
@@ -76,6 +73,12 @@ public class VistaMenu extends javax.swing.JFrame {
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setText("X");
         jPanel1.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 10, -1, -1));
+
+        btnComand2.setBackground(new java.awt.Color(51, 0, 255));
+        btnComand2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnComand2.setForeground(new java.awt.Color(255, 255, 255));
+        btnComand2.setText("Command");
+        jPanel1.add(btnComand2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 110, 80));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.jpg"))); // NOI18N
         Fondo.setText("jLabel2");
@@ -97,9 +100,13 @@ public class VistaMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCommandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCommandActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCommandActionPerformed
+    public JButton getBtnComand2() {
+        return btnComand2;
+    }
+
+    public void setBtnComand2(JButton btnComand2) {
+        this.btnComand2 = btnComand2;
+    }
 
     public JButton getBtnCommand() {
         return btnCommand;
@@ -145,6 +152,7 @@ public class VistaMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
+    private javax.swing.JButton btnComand2;
     private javax.swing.JButton btnCommand;
     private javax.swing.JButton btnMediator;
     private javax.swing.JButton btnSalir;

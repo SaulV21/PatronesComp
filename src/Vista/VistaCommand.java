@@ -42,7 +42,9 @@ public class VistaCommand extends javax.swing.JFrame {
         txtSaldo = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("COMMAND");
@@ -62,6 +64,9 @@ public class VistaCommand extends javax.swing.JFrame {
         jPanel1.add(txtnumcuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 200, -1));
         jPanel1.add(txtmonto, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 130, -1));
 
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
         txtSaldo.setEditable(false);
         txtSaldo.setColumns(20);
         txtSaldo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -70,7 +75,7 @@ public class VistaCommand extends javax.swing.JFrame {
         txtSaldo.setWrapStyleWord(true);
         jScrollPane1.setViewportView(txtSaldo);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, 130));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

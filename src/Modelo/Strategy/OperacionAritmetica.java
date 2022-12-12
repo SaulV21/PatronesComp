@@ -9,9 +9,9 @@ package Modelo.Strategy;
  * @author Saul
  */
 public class OperacionAritmetica {
-     private IAritmetica strategy;
+    private InAritmetica strategy;
     // ----------------------------------
-    public OperacionAritmetica(IAritmetica strategy) {
+    public OperacionAritmetica(InAritmetica strategy) {
         this.strategy = strategy;
     }
     // ----------------------------------

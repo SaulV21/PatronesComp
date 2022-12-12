@@ -54,11 +54,11 @@ public class VistaMediator extends javax.swing.JFrame {
     }
 
     public JTextArea getTxtMensaje2() {
-        return txtMensaje1;
+        return txtMensaje2;
     }
 
     public void setTxtMensaje2(JTextArea txtMensaje2) {
-        this.txtMensaje1 = txtMensaje2;
+        this.txtMensaje2 = txtMensaje2;
     }
 
     public JTextField getTxtuser1() {
@@ -77,6 +77,7 @@ public class VistaMediator extends javax.swing.JFrame {
         this.txtuser2 = txtuser2;
     }
 
+    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -99,6 +100,7 @@ public class VistaMediator extends javax.swing.JFrame {
         txtMensaje2 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
